@@ -1,0 +1,52 @@
+<app-search></app-search>
+<div class="container-fluid">
+    <div class="row" let *ngFor="let hotel of hotelDomain">
+        <div class="col-md-5">
+            <img class="d-block w-100" src="..\assets\{{hotel.pic}}" height="268px" /><br>
+        </div>
+        <div class="col-md-7">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4 style="font-family: 'Courier New', Courier, monospace;">{{hotel.name}}</h4>
+                            <span>{{hotel.address}}</span>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="text-right">{{hotel.price | currency:'INR'}}</p>
+                            <button class="btn btn-success float-right">Book Now</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <span class="badge badge-info">Amenities</span>
+                    <div style="overflow-x:auto;">
+                        <table class="table responsive">
+                            <tbody>
+                                <tr>
+                                    <td><i class='fas fa-wind'></i>&nbsp;AC</td>
+                                    <td><i class="fa fa-tv"></i>&nbsp;TV
+                                    </td>
+                                    <td><i class="fa fa-wifi"></i>&nbsp;Wifi</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-battery-full"></i>&nbsp;Power Backup
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-shower"></i>Geyser
+                                    </td>
+                                    <td>
+                                        <i class='fas fa-home'></i>Kitchen
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </li>
+            </ul>
+            <br>
+        </div>
+    </div>
+</div>
